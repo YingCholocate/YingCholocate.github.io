@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Smileyan</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+ 
+<body>
+    <h1>
+        <a href="/">Hexo</a> |
+        <a href="/">Home</a> | 
+        <a href="/archives">Archive</a>
+    </h1>
+    <!-- 博客详情 -->
+ 
+
+<h2>前后端分离部署</h2>
+<p>2023/08/04 22:58:31 </p>
+<!-- 部署 云服务器-->
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/933729#slide-2">https://developer.aliyun.com/article/933729#slide-2</a></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li>购买云服务器</li>
+<li>链接远程服务器，linux系统</li>
+<li>安装nginx </li>
+<li>连接云服务器MySQL：<br>（1）查看mysql是否启动，才能确定是否能够连接 <code>service mysqld status</code>或<code>ps -e |grep mysqld</code>     查看你mysql运行对应的进程<br>（2）进入mysql服务器 <code>mysql -uroot -p</code></li>
+<li>部署前端</li>
+<li>部署后端</li>
+</ol>
+<h2 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h2><h3 id="1-nginx安装注意的点"><a href="#1-nginx安装注意的点" class="headerlink" title="1. nginx安装注意的点"></a>1. nginx安装注意的点</h3><p>(1) nginx不能使用该命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/t8116189520/article/details/81909574</span><br><span class="line">//一键安装上面四个依赖</span><br><span class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br><span class="line">//创建一个文件夹</span><br><span class="line">cd /usr/local</span><br><span class="line">mkdir nginx</span><br><span class="line">cd nginx</span><br><span class="line">//下载tar包</span><br><span class="line">wget http://nginx.org/download/nginx-1.13.7.tar.gz</span><br><span class="line">tar -xvf nginx-1.13.7.tar.gz</span><br><span class="line">//进入nginx目录</span><br><span class="line">cd /usr/local/nginx</span><br><span class="line">//进入目录</span><br><span class="line">cd nginx-1.13.7</span><br><span class="line">//执行命令 考虑到后续安装ssl证书 添加两个模块</span><br><span class="line">./configure --with-http_stub_status_module --with-http_ssl_module</span><br><span class="line">//执行make命令</span><br><span class="line">make</span><br><span class="line">//执行make install命令</span><br><span class="line">make install</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动nginx服务</span></span><br><span class="line"> ​​​​​​​/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">打开配置文件</span></span><br><span class="line">vi /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将端口号改成8089(随便挑个端口)，因为可能apeache占用80端口，apeache端口尽量不要修改，我们选择修改nginx端口。</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 重启nginx</span></span></span><br><span class="line"></span><br><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看nginx进程是否启动：</span></span><br><span class="line"></span><br><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
+<p>(2)nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)<br>一般原因是nginx端口被占用了.<br>解决方法：<br>ps -ef|grep nginx</p>
+<p>kill pad<br>或者</p>
+<p>切换到nginx sbin目录<br>– 停止<br>sudo .&#x2F;nginx -s stop</p>
+<p>– 启动<br>.&#x2F;nginx</p>
+ 
+
+<h5>
+    <a href="/2023/08/04/hello-world/">
+        < 上一篇：Hello World
+    </a>
+</h5>
+
+<h5>
+    <a href="/2023/07/10/Deploy/">
+        下一篇：Deploy >
+     </a>
+</h5>
+ 
+
+    <h3>categories</h3>
+    <ul>
+        
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+        
+            <li>
+                <a href="/tags/public/">
+                    public 
+                </a>
+            </li>
+        
+    </ul>
+
+</body>
+ 
+</html>
