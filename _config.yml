@@ -3,15 +3,15 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: YingCholocate # 网站标题
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: ''
+language: zh-CN
 timezone: ''
 
-# URL
+# URL 网址
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
 permalink: :year/:month/:day/:title/
@@ -26,7 +26,7 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-code_dir: downloads/code
+code_dir:
 i18n_dir: :lang
 skip_render:
 
@@ -96,9 +96,8 @@ ignore:
 
 # Extensions //landscape
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+# Themes: https://hexo.io/themes/
 theme: base
-
 
 # Deployment 部署的脚本
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -1,8 +1,14 @@
 # YingCholocate.github.io
 
+my blog. Under development... keep learning
+
+some knowledge and shell of project
+some knowledge of coding
+my artwork
+
 ### 内容介绍
 
-1. 首页 稍微制作好看一点
+1. 首页
 2. 文章 (分标签，加锁标志)
 3. 作品（一些做出的项目)
 
