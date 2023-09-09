@@ -70,6 +70,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-projectSetting" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/09/09/projectSetting/" class="article-date">
+  <time class="dt-published" datetime="2023-09-09T15:42:27.000Z" itemprop="datePublished">2023-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/09/09/projectSetting/">projectSetting</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Eslint-stylelint-prettier-commitlint规范项目开发"><a href="#Eslint-stylelint-prettier-commitlint规范项目开发" class="headerlink" title="Eslint+stylelint+prettier+commitlint规范项目开发"></a>Eslint+stylelint+prettier+commitlint规范项目开发</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7033552881374461960">https://juejin.cn/post/7033552881374461960</a></p>
+</blockquote>
+<h3 id="1-ESLINT"><a href="#1-ESLINT" class="headerlink" title="1. ESLINT"></a>1. ESLINT</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pnpm add stylelint stylelint-order stylelint-config-standard  stylelint-config-prettier -D</span><br><span class="line"></span><br><span class="line">npx eslint --init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>stylelint:检验工具</li>
+<li>stylelint-order：css样式书写顺序插件</li>
+<li>stylelint-config-standard:stylelint的推荐配置</li>
+<li>stylelint-config-prettier：关闭所有不必要的或可能与 Prettier 冲突的规则<br>并设置选项<br>“extends”: [“prettier”]</li>
+</ul>
+<h3 id="2-prettier"><a href="#2-prettier" class="headerlink" title="2. prettier"></a>2. prettier</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add prettier -D</span><br></pre></td></tr></table></figure>
+<h2 id="配置-Git-Husky-代码提交约束"><a href="#配置-Git-Husky-代码提交约束" class="headerlink" title="配置 Git Husky 代码提交约束"></a>配置 Git Husky 代码提交约束</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pnpm add husky -D</span><br><span class="line">npx huxky install</span><br><span class="line">pnpm pkg set scripts.prepare=&quot;husky install&quot;</span><br><span class="line">npx husky add .husky/pre-commit</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line"> pnpm add @commitlint/cli -D</span><br><span class="line">pnpm add @commitlint/config-conventional -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#.husky/pre-commit</span></span><br><span class="line"><span class="comment">#!/usr/bin/env sh</span></span><br><span class="line">. <span class="string">&quot;<span class="subst">$(dirname -- <span class="string">&quot;<span class="variable">$0</span>&quot;</span>)</span>/_/husky.sh&quot;</span></span><br><span class="line"></span><br><span class="line">npm run lint</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>新建文件 commitlint.config.cjs 导入 @commitlint&#x2F;config-conventional 规则。<br>js复制代码module.exports &#x3D; {<br>  extends: [‘@commitlint&#x2F;config-conventional’],<br>};</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/09/09/projectSetting/" data-id="clmc8lped00093ow57i3o8xau" data-title="projectSetting" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project/" rel="tag">project</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-project-learning" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/08/04/project-learning/" class="article-date">
@@ -102,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/project-learning/" data-id="cllpdpotx0008wow5gxjg28z0" data-title="project-learning" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/08/04/project-learning/" data-id="clmc8lpeb00063ow51gc8157e" data-title="project-learning" class="article-share-link">分享</a>
       
       
       
@@ -164,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/hello-world/" data-id="cllpdpotu0004wow558ec11ed" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/08/04/hello-world/" data-id="clmc8lpe900043ow53jtybc7c" data-title="Hello World" class="article-share-link">分享</a>
       
       
       
@@ -218,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/clound-push/" data-id="cllpdpott0003wow56v3p4vwp" data-title="前后端分离部署" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/08/04/clound-push/" data-id="clmc8lpe500023ow56hoe6wuy" data-title="前后端分离部署" class="article-share-link">分享</a>
       
       
       
@@ -309,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/10/Deploy/" data-id="cllpdpotk0000wow5brkh40xm" data-title="Deploy" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/07/10/Deploy/" data-id="clmc8lpe300013ow5grfph7gi" data-title="Deploy" class="article-share-link">分享</a>
       
       
       
@@ -350,7 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/18/ToolArchiving/" data-id="cllpdpotp0001wow57ot1hhne" data-title="ToolArchiving" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/06/18/ToolArchiving/" data-id="clmc8lpdy00003ow51f9yawn3" data-title="ToolArchiving" class="article-share-link">分享</a>
       
       
       
@@ -388,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/knowledge/" data-id="cllpdpotv0005wow50t8q2xgh" data-title="knowledge" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/30/knowledge/" data-id="clmc8lpea00053ow5dnjc6uxt" data-title="knowledge" class="article-share-link">分享</a>
       
       
       
@@ -454,7 +508,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="cllpdpoty0009wow5ht0f63v9" data-title="性能优化" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/30/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="clmc8lpej000d3ow5cuvj61mb" data-title="性能优化" class="article-share-link">分享</a>
       
       
       
@@ -481,7 +535,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
     </div>
   </div>
 
@@ -491,7 +545,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/public/" style="font-size: 10px;">public</a>
+      <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/public/" style="font-size: 20px;">public</a>
     </div>
   </div>
 
@@ -500,7 +554,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
     </div>
   </div>
 
@@ -511,6 +565,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/09/09/projectSetting/">projectSetting</a>
+          </li>
         
           <li>
             <a href="/2023/08/04/project-learning/">project-learning</a>
@@ -526,10 +584,6 @@
         
           <li>
             <a href="/2023/07/10/Deploy/">Deploy</a>
-          </li>
-        
-          <li>
-            <a href="/2023/06/18/ToolArchiving/">ToolArchiving</a>
           </li>
         
       </ul>
