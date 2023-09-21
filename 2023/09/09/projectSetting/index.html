@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>projectSetting | YingCholocate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Eslint+stylelint+prettier+commitlint规范项目开发 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7033552881374461960  1. ESLINT123pnpm add stylelint stylelint-order stylelint-config-standard  stylelint-config-prettier -Dnpx eslint">
+<meta property="og:type" content="article">
+<meta property="og:title" content="projectSetting">
+<meta property="og:url" content="http://example.com/2023/09/09/projectSetting/index.html">
+<meta property="og:site_name" content="YingCholocate">
+<meta property="og:description" content="Eslint+stylelint+prettier+commitlint规范项目开发 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7033552881374461960  1. ESLINT123pnpm add stylelint stylelint-order stylelint-config-standard  stylelint-config-prettier -Dnpx eslint">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-09T15:42:27.000Z">
+<meta property="article:modified_time" content="2023-09-09T16:23:45.628Z">
+<meta property="article:tag" content="project">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="YingCholocate" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YingCholocate</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">YingCholocate </a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-projectSetting" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/09/09/projectSetting/" class="article-date">
+  <time class="dt-published" datetime="2023-09-09T15:42:27.000Z" itemprop="datePublished">2023-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      projectSetting
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Eslint-stylelint-prettier-commitlint规范项目开发"><a href="#Eslint-stylelint-prettier-commitlint规范项目开发" class="headerlink" title="Eslint+stylelint+prettier+commitlint规范项目开发"></a>Eslint+stylelint+prettier+commitlint规范项目开发</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7033552881374461960">https://juejin.cn/post/7033552881374461960</a></p>
+</blockquote>
+<h3 id="1-ESLINT"><a href="#1-ESLINT" class="headerlink" title="1. ESLINT"></a>1. ESLINT</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pnpm add stylelint stylelint-order stylelint-config-standard  stylelint-config-prettier -D</span><br><span class="line"></span><br><span class="line">npx eslint --init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>stylelint:检验工具</li>
+<li>stylelint-order：css样式书写顺序插件</li>
+<li>stylelint-config-standard:stylelint的推荐配置</li>
+<li>stylelint-config-prettier：关闭所有不必要的或可能与 Prettier 冲突的规则<br>并设置选项<br>“extends”: [“prettier”]</li>
+</ul>
+<h3 id="2-prettier"><a href="#2-prettier" class="headerlink" title="2. prettier"></a>2. prettier</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add prettier -D</span><br></pre></td></tr></table></figure>
+<h2 id="配置-Git-Husky-代码提交约束"><a href="#配置-Git-Husky-代码提交约束" class="headerlink" title="配置 Git Husky 代码提交约束"></a>配置 Git Husky 代码提交约束</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pnpm add husky -D</span><br><span class="line">npx huxky install</span><br><span class="line">pnpm pkg set scripts.prepare=&quot;husky install&quot;</span><br><span class="line">npx husky add .husky/pre-commit</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line"> pnpm add @commitlint/cli -D</span><br><span class="line">pnpm add @commitlint/config-conventional -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#.husky/pre-commit</span></span><br><span class="line"><span class="comment">#!/usr/bin/env sh</span></span><br><span class="line">. <span class="string">&quot;<span class="subst">$(dirname -- <span class="string">&quot;<span class="variable">$0</span>&quot;</span>)</span>/_/husky.sh&quot;</span></span><br><span class="line"></span><br><span class="line">npm run lint</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>新建文件 commitlint.config.cjs 导入 @commitlint&#x2F;config-conventional 规则。<br>js复制代码module.exports &#x3D; {<br>  extends: [‘@commitlint&#x2F;config-conventional’],<br>};</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/09/09/projectSetting/" data-id="clmtdx2vw0005ycw5b8th1cq4" data-title="projectSetting" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project/" rel="tag">project</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/08/04/project-learning/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">project-learning</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/public/" style="font-size: 20px;">public</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/09/09/projectSetting/">projectSetting</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/project-learning/">project-learning</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/clound-push/">前后端分离部署</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/10/Deploy/">Deploy</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 YingCholocate<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

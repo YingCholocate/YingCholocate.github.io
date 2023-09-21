@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>前后端分离部署 | YingCholocate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="https:&#x2F;&#x2F;developer.aliyun.com&#x2F;article&#x2F;933729#slide-2 步骤 购买云服务器 链接远程服务器，linux系统 安装nginx  连接云服务器MySQL：（1）查看mysql是否启动，才能确定是否能够连接 service mysqld status或ps -e |grep mysqld     查看你mysql运行对应的进程（2）进入mysql服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端分离部署">
+<meta property="og:url" content="http://example.com/2023/08/04/clound-push/index.html">
+<meta property="og:site_name" content="YingCholocate">
+<meta property="og:description" content="https:&#x2F;&#x2F;developer.aliyun.com&#x2F;article&#x2F;933729#slide-2 步骤 购买云服务器 链接远程服务器，linux系统 安装nginx  连接云服务器MySQL：（1）查看mysql是否启动，才能确定是否能够连接 service mysqld status或ps -e |grep mysqld     查看你mysql运行对应的进程（2）进入mysql服务器">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-04T14:58:31.478Z">
+<meta property="article:modified_time" content="2023-08-04T14:58:31.484Z">
+<meta property="article:tag" content="public">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="YingCholocate" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YingCholocate</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">YingCholocate </a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-clound-push" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/04/clound-push/" class="article-date">
+  <time class="dt-published" datetime="2023-08-04T14:58:31.478Z" itemprop="datePublished">2023-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      前后端分离部署
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <!-- 部署 云服务器-->
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/933729#slide-2">https://developer.aliyun.com/article/933729#slide-2</a></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li>购买云服务器</li>
+<li>链接远程服务器，linux系统</li>
+<li>安装nginx </li>
+<li>连接云服务器MySQL：<br>（1）查看mysql是否启动，才能确定是否能够连接 <code>service mysqld status</code>或<code>ps -e |grep mysqld</code>     查看你mysql运行对应的进程<br>（2）进入mysql服务器 <code>mysql -uroot -p</code></li>
+<li>部署前端</li>
+<li>部署后端</li>
+</ol>
+<h2 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h2><h3 id="1-nginx安装注意的点"><a href="#1-nginx安装注意的点" class="headerlink" title="1. nginx安装注意的点"></a>1. nginx安装注意的点</h3><p>(1) nginx不能使用该命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/t8116189520/article/details/81909574</span><br><span class="line">//一键安装上面四个依赖</span><br><span class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br><span class="line">//创建一个文件夹</span><br><span class="line">cd /usr/local</span><br><span class="line">mkdir nginx</span><br><span class="line">cd nginx</span><br><span class="line">//下载tar包</span><br><span class="line">wget http://nginx.org/download/nginx-1.13.7.tar.gz</span><br><span class="line">tar -xvf nginx-1.13.7.tar.gz</span><br><span class="line">//进入nginx目录</span><br><span class="line">cd /usr/local/nginx</span><br><span class="line">//进入目录</span><br><span class="line">cd nginx-1.13.7</span><br><span class="line">//执行命令 考虑到后续安装ssl证书 添加两个模块</span><br><span class="line">./configure --with-http_stub_status_module --with-http_ssl_module</span><br><span class="line">//执行make命令</span><br><span class="line">make</span><br><span class="line">//执行make install命令</span><br><span class="line">make install</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动nginx服务</span></span><br><span class="line"> ​​​​​​​/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">打开配置文件</span></span><br><span class="line">vi /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将端口号改成8089(随便挑个端口)，因为可能apeache占用80端口，apeache端口尽量不要修改，我们选择修改nginx端口。</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 重启nginx</span></span></span><br><span class="line"></span><br><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看nginx进程是否启动：</span></span><br><span class="line"></span><br><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
+<p>(2)nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)<br>一般原因是nginx端口被占用了.<br>解决方法：<br>ps -ef|grep nginx</p>
+<p>kill pad<br>或者</p>
+<p>切换到nginx sbin目录<br>– 停止<br>sudo .&#x2F;nginx -s stop</p>
+<p>– 启动<br>.&#x2F;nginx</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/04/clound-push/" data-id="clmtdx2vv0004ycw54swidjyj" data-title="前后端分离部署" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/08/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/07/10/Deploy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Deploy</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/public/" style="font-size: 20px;">public</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/09/09/projectSetting/">projectSetting</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/project-learning/">project-learning</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/clound-push/">前后端分离部署</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/10/Deploy/">Deploy</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 YingCholocate<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
