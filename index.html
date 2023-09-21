@@ -6,10 +6,12 @@
   
   <title>YingCholocate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="YingCholocate">
+<meta property="og:type" content="website">
 <meta property="og:title" content="YingCholocate">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="YingCholocate">
+<meta property="og:description" content="YingCholocate">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
   
@@ -44,6 +46,10 @@
         <a href="/" id="logo">YingCholocate</a>
       </h1>
       
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">YingCholocate </a>
+        </h2>
+      
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
@@ -69,104 +75,6 @@
 
       <div class="outer">
         <section id="main">
-  
-    <article id="post-projectSetting" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/09/09/projectSetting/" class="article-date">
-  <time class="dt-published" datetime="2023-09-09T15:42:27.000Z" itemprop="datePublished">2023-09-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/09/09/projectSetting/">projectSetting</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="Eslint-stylelint-prettier-commitlint规范项目开发"><a href="#Eslint-stylelint-prettier-commitlint规范项目开发" class="headerlink" title="Eslint+stylelint+prettier+commitlint规范项目开发"></a>Eslint+stylelint+prettier+commitlint规范项目开发</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7033552881374461960">https://juejin.cn/post/7033552881374461960</a></p>
-</blockquote>
-<h3 id="1-ESLINT"><a href="#1-ESLINT" class="headerlink" title="1. ESLINT"></a>1. ESLINT</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pnpm add stylelint stylelint-order stylelint-config-standard  stylelint-config-prettier -D</span><br><span class="line"></span><br><span class="line">npx eslint --init</span><br></pre></td></tr></table></figure>
-<ul>
-<li>stylelint:检验工具</li>
-<li>stylelint-order：css样式书写顺序插件</li>
-<li>stylelint-config-standard:stylelint的推荐配置</li>
-<li>stylelint-config-prettier：关闭所有不必要的或可能与 Prettier 冲突的规则<br>并设置选项<br>“extends”: [“prettier”]</li>
-</ul>
-<h3 id="2-prettier"><a href="#2-prettier" class="headerlink" title="2. prettier"></a>2. prettier</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add prettier -D</span><br></pre></td></tr></table></figure>
-<h2 id="配置-Git-Husky-代码提交约束"><a href="#配置-Git-Husky-代码提交约束" class="headerlink" title="配置 Git Husky 代码提交约束"></a>配置 Git Husky 代码提交约束</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pnpm add husky -D</span><br><span class="line">npx huxky install</span><br><span class="line">pnpm pkg set scripts.prepare=&quot;husky install&quot;</span><br><span class="line">npx husky add .husky/pre-commit</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line"> pnpm add @commitlint/cli -D</span><br><span class="line">pnpm add @commitlint/config-conventional -D</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#.husky/pre-commit</span></span><br><span class="line"><span class="comment">#!/usr/bin/env sh</span></span><br><span class="line">. <span class="string">&quot;<span class="subst">$(dirname -- <span class="string">&quot;<span class="variable">$0</span>&quot;</span>)</span>/_/husky.sh&quot;</span></span><br><span class="line"></span><br><span class="line">npm run lint</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>新建文件 commitlint.config.cjs 导入 @commitlint&#x2F;config-conventional 规则。<br>js复制代码module.exports &#x3D; {<br>  extends: [‘@commitlint&#x2F;config-conventional’],<br>};</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/09/09/projectSetting/" data-id="clmc8lped00093ow57i3o8xau" data-title="projectSetting" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project/" rel="tag">project</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-project-learning" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/08/04/project-learning/" class="article-date">
-  <time class="dt-published" datetime="2023-08-04T14:58:31.508Z" itemprop="datePublished">2023-08-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/08/04/project-learning/">project-learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Could-not-find-a-declaration-file-for-module-‘-x2F-views-x2F-Home-vue’"><a href="#Could-not-find-a-declaration-file-for-module-‘-x2F-views-x2F-Home-vue’" class="headerlink" title="#Could not find a declaration file for module ‘@&#x2F;views&#x2F;Home.vue’."></a>#Could not find a declaration file for module ‘@&#x2F;views&#x2F;Home.vue’.</h1><ol>
-<li>缺少相关声明文件<br>在 ts 项目里面，.ts 文件是识别不了.vue 文件，.vue 文件也识别不了.ts 文件，这时候就需要.d.ts 声明文件来填好这个坑啦。</li>
-<li>Unhandled error during execution of setup function<br>组件事件处理程序执行期间未处理的错误操作流程。</li>
-<li>vue2 Mixins 的基本使用以及 vue3 组合 API 的替代<br><a target="_blank" rel="noopener" href="https://juejin.cn/post/6955876995603365896">https://juejin.cn/post/6955876995603365896</a></li>
-</ol>
-<h2 id="pnpm-安裝包出現問題"><a href="#pnpm-安裝包出現問題" class="headerlink" title="pnpm 安裝包出現問題"></a>pnpm 安裝包出現問題</h2><p>执行<code>pnpm config set auto-install-peers true</code>会生成.npmrc 文件<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600213330">https://zhuanlan.zhihu.com/p/600213330</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/project-learning/" data-id="clmc8lpeb00063ow51gc8157e" data-title="project-learning" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
   
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -218,231 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/hello-world/" data-id="clmc8lpe900043ow53jtybc7c" data-title="Hello World" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-clound-push" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/08/04/clound-push/" class="article-date">
-  <time class="dt-published" datetime="2023-08-04T14:58:31.478Z" itemprop="datePublished">2023-08-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/08/04/clound-push/">前后端分离部署</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!-- 部署 云服务器-->
-<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/933729#slide-2">https://developer.aliyun.com/article/933729#slide-2</a></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li>购买云服务器</li>
-<li>链接远程服务器，linux系统</li>
-<li>安装nginx </li>
-<li>连接云服务器MySQL：<br>（1）查看mysql是否启动，才能确定是否能够连接 <code>service mysqld status</code>或<code>ps -e |grep mysqld</code>     查看你mysql运行对应的进程<br>（2）进入mysql服务器 <code>mysql -uroot -p</code></li>
-<li>部署前端</li>
-<li>部署后端</li>
-</ol>
-<h2 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h2><h3 id="1-nginx安装注意的点"><a href="#1-nginx安装注意的点" class="headerlink" title="1. nginx安装注意的点"></a>1. nginx安装注意的点</h3><p>(1) nginx不能使用该命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/t8116189520/article/details/81909574</span><br><span class="line">//一键安装上面四个依赖</span><br><span class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br><span class="line">//创建一个文件夹</span><br><span class="line">cd /usr/local</span><br><span class="line">mkdir nginx</span><br><span class="line">cd nginx</span><br><span class="line">//下载tar包</span><br><span class="line">wget http://nginx.org/download/nginx-1.13.7.tar.gz</span><br><span class="line">tar -xvf nginx-1.13.7.tar.gz</span><br><span class="line">//进入nginx目录</span><br><span class="line">cd /usr/local/nginx</span><br><span class="line">//进入目录</span><br><span class="line">cd nginx-1.13.7</span><br><span class="line">//执行命令 考虑到后续安装ssl证书 添加两个模块</span><br><span class="line">./configure --with-http_stub_status_module --with-http_ssl_module</span><br><span class="line">//执行make命令</span><br><span class="line">make</span><br><span class="line">//执行make install命令</span><br><span class="line">make install</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动nginx服务</span></span><br><span class="line"> ​​​​​​​/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">打开配置文件</span></span><br><span class="line">vi /usr/local/nginx/conf/nginx.conf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将端口号改成8089(随便挑个端口)，因为可能apeache占用80端口，apeache端口尽量不要修改，我们选择修改nginx端口。</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 重启nginx</span></span></span><br><span class="line"></span><br><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看nginx进程是否启动：</span></span><br><span class="line"></span><br><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
-<p>(2)nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)<br>一般原因是nginx端口被占用了.<br>解决方法：<br>ps -ef|grep nginx</p>
-<p>kill pad<br>或者</p>
-<p>切换到nginx sbin目录<br>– 停止<br>sudo .&#x2F;nginx -s stop</p>
-<p>– 启动<br>.&#x2F;nginx</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/04/clound-push/" data-id="clmc8lpe500023ow56hoe6wuy" data-title="前后端分离部署" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/10/Deploy/" class="article-date">
-  <time class="dt-published" datetime="2023-07-10T15:26:25.000Z" itemprop="datePublished">2023-07-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/10/Deploy/">Deploy</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><h3 id="shell-脚本介绍"><a href="#shell-脚本介绍" class="headerlink" title="shell 脚本介绍"></a>shell 脚本介绍</h3><ol>
-<li><p>是什么：用户每输入一条命令，就相应执行一条命令。不是通过命令行实现，而是利用一个程序文件来执行。</p>
-</li>
-<li><p>变量的定义，使用。用$定义</p>
-<ul>
-<li><p>name 为变量：</p>
-</li>
-<li><p>echo $name</p>
-</li>
-<li><p>echo ${name}</p>
-</li>
-<li><p>删除定义的变量 ：unset name</p>
-</li>
-</ul>
-</li>
-<li><p>流程控制：</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if ...</span><br><span class="line">then ...</span><br><span class="line">else ...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>一些标识符说明</li>
-</ol>
-<ul>
-<li>-ge 大于等于</li>
-<li>-le 小于等于</li>
-<li>-gt 大于</li>
-<li>-lt 小于</li>
-<li>-eq 等于</li>
-<li>-ne 不等于</li>
-</ul>
-<ol start="5">
-<li>Case</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">case 值 in</span><br><span class="line">匹配值1)</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line"></span><br><span class="line">    ;;</span><br><span class="line">匹配值2）</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>For</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for i in item1 item2 ... itemN</span><br><span class="line">do</span><br><span class="line">    command1</span><br><span class="line">    command2</span><br><span class="line">    ...</span><br><span class="line">    commandN</span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>注释</li>
-</ol>
-<ul>
-<li>单行注释：#</li>
-</ul>
-<ol start="8">
-<li>通用发布脚本参考<br><a target="_blank" rel="noopener" href="https://github.com/showyouself/deploy.sh">https://github.com/showyouself/deploy.sh</a></li>
-<li>my website 脚本部署化流程</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/10/Deploy/" data-id="clmc8lpe300013ow5grfph7gi" data-title="Deploy" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-ToolArchiving" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/18/ToolArchiving/" class="article-date">
-  <time class="dt-published" datetime="2023-06-17T16:17:04.000Z" itemprop="datePublished">2023-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/18/ToolArchiving/">ToolArchiving</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>介绍在项目开发中会用到的工具，以及做项目时要用到的配置文件之类的，好用的开发工具</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/18/ToolArchiving/" data-id="clmc8lpdy00003ow51f9yawn3" data-title="ToolArchiving" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="front-end-knowledge" class="h-entry article article-type-front-end" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/30/knowledge/" class="article-date">
-  <time class="dt-published" datetime="2023-05-30T09:56:12.000Z" itemprop="datePublished">2023-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/30/knowledge/">knowledge</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/knowledge/" data-id="clmc8lpea00053ow5dnjc6uxt" data-title="knowledge" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/08/04/hello-world/" data-id="clmtdm8n400004ow5e7gw1pua" data-title="Hello World" class="article-share-link">分享</a>
       
       
       
@@ -508,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="clmc8lpej000d3ow5cuvj61mb" data-title="性能优化" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/30/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="clmtdm8na00014ow5c9dca74l" data-title="性能优化" class="article-share-link">分享</a>
       
       
       
@@ -535,7 +219,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/public/" rel="tag">public</a></li></ul>
     </div>
   </div>
 
@@ -545,7 +229,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/public/" style="font-size: 20px;">public</a>
+      <a href="/tags/public/" style="font-size: 10px;">public</a>
     </div>
   </div>
 
@@ -554,7 +238,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
     </div>
   </div>
 
@@ -567,23 +251,11 @@
       <ul>
         
           <li>
-            <a href="/2023/09/09/projectSetting/">projectSetting</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/04/project-learning/">project-learning</a>
-          </li>
-        
-          <li>
             <a href="/2023/08/04/hello-world/">Hello World</a>
           </li>
         
           <li>
-            <a href="/2023/08/04/clound-push/">前后端分离部署</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/10/Deploy/">Deploy</a>
+            <a href="/2023/05/30/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a>
           </li>
         
       </ul>
