@@ -4,9 +4,9 @@
 
 # Site
 title: YingCholocate # 网站标题
-subtitle: ''
-description: ''
-keywords:
+subtitle: 'YingCholocate '
+description: 'YingCholocate '
+keywords: 'Blog'
 author: ''
 language: zh-CN
 timezone: ''
@@ -96,8 +96,8 @@ ignore:
 
 # Extensions //landscape
 ## Plugins: https://hexo.io/plugins/
-# Themes: https://hexo.io/themes/
-theme: base
+Themes: https://hexo.io/themes/
+# theme: base
 
 # Deployment 部署的脚本
 ## Docs: https://hexo.io/docs/one-command-deployment

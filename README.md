@@ -9,7 +9,7 @@ my artwork
 ### 内容介绍
 
 1. 首页
-2. 文章 (分标签，加锁标志)
+2. 文章 (分标签)
 3. 作品（一些做出的项目)
 
 ### 部署的步骤
@@ -17,6 +17,10 @@ my artwork
 hexo clean
 hexo g
 hexo d
+
+# 查看hexo的开发的网页
+
+hexo server
 
 ### 创建新文件
 
@@ -26,6 +30,9 @@ hexo new [layout] <title>
 ### 文件夹介绍
 
 1. scaffolds 设置模板格式:post；draft :草稿；
+2. source 放置Markdown文档
+3. attrives存放归档的文档
+4. public 文件夹 archives按年份 tag 按标签
 
 ### blog 技术方案调研
 
