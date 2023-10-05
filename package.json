@@ -13,8 +13,6 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "@types/node": "^20.4.7",
-    "@types/react": "^18.2.18",
     "hexo": "^6.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
@@ -25,18 +23,22 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
+    "hexo-site": "link:",
     "hexo-theme-landscape": "^0.0.3",
     "next": "^13.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
-    "react-query": "^3.39.3",
-    "typescript": "^5.1.6"
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@next/env": "^13.5.4",
+    "@swc/helpers": "^0.5.2",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.4.7",
+    "@types/react": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "autoprefixer": "^10.4.14",
@@ -53,6 +55,7 @@
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-order": "^6.0.3",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.6"
   }
 }
