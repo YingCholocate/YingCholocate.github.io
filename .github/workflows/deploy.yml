@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 'v16.16.0'
+      - run: npm install -g npm #避免出现Unsupported URL Type错误，用于更npm版本
       - run: npm install # 安装依赖
       - run: npm run build # 打包
 
