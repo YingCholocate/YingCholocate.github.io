@@ -1,6 +1,10 @@
 {
+  "/_not-found": "app/_not-found.js",
   "/page": "app/page.js",
   "/project/page": "app/project/page.js",
+  "/api/tagData/route": "app/api/tagData/route.js",
+  "/labels/[slug]/page": "app/labels/[slug]/page.js",
+  "/api/tagBlogData/[folder]/route": "app/api/tagBlogData/[folder]/route.js",
   "/blog/[tag]/[slug]/page": "app/blog/[tag]/[slug]/page.js",
-  "/labels/[slug]/page": "app/labels/[slug]/page.js"
+  "/api/readFile/[tag]/[filename]/route": "app/api/readFile/[tag]/[filename]/route.js"
 }
