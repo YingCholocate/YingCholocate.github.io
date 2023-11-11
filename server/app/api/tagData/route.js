@@ -19,7 +19,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 8776:
+/***/ 6229:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -63,7 +63,7 @@ async function GET() {
     });
 }
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.12_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2FtagData%2Froute&name=app%2Fapi%2FtagData%2Froute&pagePath=private-next-app-dir%2Fapi%2FtagData%2Froute.ts&appDir=D%3A%5Cworkplace%5Cblog-website%5CYingCholocate.github.io%5Capp&appPaths=%2Fapi%2FtagData%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.12_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2FtagData%2Froute&name=app%2Fapi%2FtagData%2Froute&pagePath=private-next-app-dir%2Fapi%2FtagData%2Froute.ts&appDir=D%3A%5Cworkplace%5Cblog-website%5CYingCholocate.github.io%5Capp&appPaths=%2Fapi%2FtagData%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -71,7 +71,7 @@ async function GET() {
 
     
 
-    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/tagData/route","pathname":"/api/tagData","filename":"route","bundlePath":"app/api/tagData/route"},"resolvedPagePath":"D:\\workplace\\blog-website\\YingCholocate.github.io\\app\\api\\tagData\\route.ts","nextConfigOutput":""}
+    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/tagData/route","pathname":"/api/tagData","filename":"route","bundlePath":"app/api/tagData/route"},"resolvedPagePath":"D:\\workplace\\blog-website\\YingCholocate.github.io\\app\\api\\tagData\\route.ts","nextConfigOutput":"export"}
     const routeModule = new (module_default())({
       ...options,
       userland: route_namespaceObject,
@@ -101,7 +101,7 @@ async function GET() {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [200,99], () => (__webpack_exec__(8776)));
+var __webpack_exports__ = __webpack_require__.X(0, [200,99], () => (__webpack_exec__(6229)));
 module.exports = __webpack_exports__;
 
 })();

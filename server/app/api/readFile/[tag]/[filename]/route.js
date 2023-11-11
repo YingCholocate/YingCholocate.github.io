@@ -19,7 +19,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 7135:
+/***/ 3446:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -63,7 +63,7 @@ async function GET(req, { params }) {
     });
 }
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.12_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&name=app%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&pagePath=private-next-app-dir%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute.ts&appDir=D%3A%5Cworkplace%5Cblog-website%5CYingCholocate.github.io%5Capp&appPaths=%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.12_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&name=app%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&pagePath=private-next-app-dir%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute.ts&appDir=D%3A%5Cworkplace%5Cblog-website%5CYingCholocate.github.io%5Capp&appPaths=%2Fapi%2FreadFile%2F%5Btag%5D%2F%5Bfilename%5D%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -71,7 +71,7 @@ async function GET(req, { params }) {
 
     
 
-    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/readFile/[tag]/[filename]/route","pathname":"/api/readFile/[tag]/[filename]","filename":"route","bundlePath":"app/api/readFile/[tag]/[filename]/route"},"resolvedPagePath":"D:\\workplace\\blog-website\\YingCholocate.github.io\\app\\api\\readFile\\[tag]\\[filename]\\route.ts","nextConfigOutput":""}
+    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/readFile/[tag]/[filename]/route","pathname":"/api/readFile/[tag]/[filename]","filename":"route","bundlePath":"app/api/readFile/[tag]/[filename]/route"},"resolvedPagePath":"D:\\workplace\\blog-website\\YingCholocate.github.io\\app\\api\\readFile\\[tag]\\[filename]\\route.ts","nextConfigOutput":"export"}
     const routeModule = new (module_default())({
       ...options,
       userland: route_namespaceObject,
@@ -101,7 +101,7 @@ async function GET(req, { params }) {
 var __webpack_require__ = require("../../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [200,99], () => (__webpack_exec__(7135)));
+var __webpack_exports__ = __webpack_require__.X(0, [200,99], () => (__webpack_exec__(3446)));
 module.exports = __webpack_exports__;
 
 })();
