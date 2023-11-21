@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fapi\u002FreadFile\u002F[tag]\u002F[filename]","\u002Fapi\u002FtagBlogData\u002F[folder]","\u002Fblog\u002F[tag]\u002F[slug]","\u002Flabels\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
