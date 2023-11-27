@@ -47,7 +47,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1",
     "react-syntax-highlighter": "^15.5.0",
