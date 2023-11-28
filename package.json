@@ -37,7 +37,7 @@
     "@swc/helpers": "^0.5.2",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.4.7",
-    "@types/react": "^18.2.18",
+    "@types/react": "^18.2.39",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "autoprefixer": "^10.4.14",
