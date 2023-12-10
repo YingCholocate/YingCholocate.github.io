@@ -16,9 +16,9 @@ export default function BlogTag() {
     router.push(`/labels/${tag}`)
   }
   return (
-    <div className="grid grid-cols-4 gap-1">
+    <div className="grid grid-cols-4 gap-1 lg:grid-cols-6">
       {data?.app?.map((tag) => (
-        <div className="flex space-x-3 cursor-pointer" key={tag} onClick={(e) => navigateToTagDetail(e, tag)}>
+        <div className="flex space-x-3 cursor-pointer m-2 " key={tag} onClick={(e) => navigateToTagDetail(e, tag)}>
           <TagIcon />
           <span>{tag}</span>
         </div>

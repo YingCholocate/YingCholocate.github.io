@@ -30,7 +30,7 @@ hexo new [layout] <title>
 ### 文件夹介绍
 
 1. scaffolds 设置模板格式:post；draft :草稿；
-2. source 放置Markdown文档
+2. docs 放置Markdown文档
 3. attrives存放归档的文档
 4. public 文件夹 archives按年份 tag 按标签
 

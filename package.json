@@ -2,12 +2,14 @@
   "name": "blog-site",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://YingCholocate.github.io",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": " next dev",
+    "build": "next build && cd out && echo test > .nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d out"
   },
   "hexo": {
     "version": "6.3.0"

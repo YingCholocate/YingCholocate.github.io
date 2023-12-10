@@ -1,0 +1,12 @@
+.screen-container {
+    position: relative;
+}
+
+.screen-container .el-loading-spinner {
+    display: inline-block !important;
+}
+
+.transition {
+    transition: all 0.5s;
+    transition-timing-function: linear;
+}

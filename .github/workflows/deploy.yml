@@ -7,8 +7,11 @@ on:
     paths-ignore: # 下列文件的变更不触发部署，可以自行添加
       - README.md
 
+permissions:
+  contents: write # 用于解决github action permission denied的问题
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # 下载源码
@@ -21,18 +24,31 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: '^18.17.0'
+      - name: 安装 Pnpm 🧬
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: true
 
-      - run: npm install --legacy-peer-deps # 安装依赖
-      - run: npm run build # 打包
+      - name: 安装依赖 ⚙️
+        run: pnpm install
+      - name: 打包 🏗️
+        run: |
+          pnpm run build
+          touch out/.nojekyll
+      # - run: npm install --legacy-peer-deps # 安装依赖
+      # - run: npm run build # 打包
 
       # 部署到 GitHub pages
-      - name: Deploy
+      - name: 部署 🚀
         uses: peaceiris/actions-gh-pages@v3 # 使用部署到 GitHub pages 的 action
         with:
-          publish_dir: ./dist # 部署打包后的 dist 目录
-          github_token: ${{ secrets.DEPLOY_SECRET }} # secret 名
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
-          release_name: ${{ steps.get_version.outputs.VERSION }}
-          # user_name: ${{ secrets.MY_USER_NAME }}
-          # user_email: ${{ secrets.MY_USER_EMAIL }}
-          # commit_message: 自动部署 # 部署时的 git 提交信息，自由填写
+          branch: gh-pages
+          folder: out
+          clean: true
+          # publish_dir: ./out # 部署打包后的 dist 目录
+          # github_token: ${{ secrets.DEPLOY_SECRET }} # secret 名
+          # tag_name: ${{ steps.get_version.outputs.VERSION }}
+          # release_name: ${{ steps.get_version.outputs.VERSION }}
+          # personal_token: ${{secrets.ACTIONS_DEPLOY_KEY}}
