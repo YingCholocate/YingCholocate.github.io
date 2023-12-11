@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { fontFamily } = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -436,6 +436,8 @@ module.exports = {
   plugins: [
     require('daisyui'),
     require('@tailwindcss/typography')
+    // require('flowbite/plugin')
+
     // require('@headlessui/tailwindcss')
   ],
   // daisyUI config (optional - here are the default values)
