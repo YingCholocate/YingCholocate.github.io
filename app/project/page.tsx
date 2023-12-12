@@ -117,15 +117,13 @@ export default function Page() {
           <div className="input border border-base-300">https://yingcholocate.github.io/CocosGame.github.io/</div>
         </div>
         <div className="flex justify-center px-4 py-16 border-t border-base-300">
-          <div className=" overflow-hidden">
+          <div className="overflow-hidden">
             <iframe
               ref={iframeRef}
               src={gameUrl}
               width={showBorder ? 100 : 500}
               height={showBorder ? 100 : 810}
-              className={`${showBorder && 'border-solid border-2 border-indigo-600 mt-2 '}`}>
-              {/* https://yingcholocate.github.io/CocosGame.github.io/ */}
-            </iframe>
+              className={`${showBorder && 'border-solid border-2 border-indigo-600 mt-2 '}`}></iframe>
           </div>
         </div>
       </div>
